@@ -1,0 +1,690 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>MNCHost.com</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3115523e-f1c7-4da1-98d6-be151fca8923" class="page serif"><header><h1 class="page-title">MNCHost.com</h1></header><div class="page-body"><p id="21af9808-6c9b-4b23-a6d0-3c20716b3992" class="">MNCHOST is a multinational web hosting company located in Nevada, United States.</p><p id="5cdbb646-af05-46fa-9532-05fd3cda22c3" class="">
+</p><h3 id="a0277927-6cdf-4291-a11e-dd5f71a9abce" class=""><a href="https://mnchost.com/">MNCHost.com</a> has all types of web hosting solutions and is <mark class="highlight-teal"><span style="border-bottom:0.05em solid">offering 50% discount</span></mark> on the price that a customer is paying to their web hosting company.</h3><p id="ea930324-e7ce-461f-a5e9-ab6b5982e476" class="">
+</p><h3 id="76b3cee9-fbb3-4931-9999-067098f3128f" class="">Steps to avail this offer:</h3><ol type="1" id="800f3427-86e0-42b0-86f7-6c7f5c359085" class="numbered-list" start="1"><li>Visit this link : <a href="https://mnchost.com/billing/index.php?rp=/store/shared-hosting">https://mnchost.com/billing/index.php?rp=/store/shared-hosting</a> </li></ol><ol type="1" id="bbb6f9c8-8a18-472c-943b-f8368387826a" class="numbered-list" start="2"><li>Browse the different hostings offered by <a href="https://mnchost.com/">MNCHost.com</a></li></ol><ol type="1" id="5ce249ef-7e6f-488f-8bfb-c72323ead0f9" class="numbered-list" start="3"><li>Email your requirements and chosen web hosting to this e-mail ID : <a href="mailto:companyland43@gmail.com">companyland43@gmail.com</a></li></ol><ol type="1" id="1fd7a7cf-367a-413b-bb7e-510c4a92459a" class="numbered-list" start="4"><li>Subject for the e-mail should be: <strong>Want to avail 50% discount</strong> </li></ol><ol type="1" id="baef2e09-e50c-4159-9a80-39a3c6444025" class="numbered-list" start="5"><li>In e-mail mention all your web hosting requirements </li></ol><ol type="1" id="1bf9a42a-04d2-4234-8722-f5fcfbae12ff" class="numbered-list" start="6"><li>we will reply to your e-mail within 1 hour. </li></ol><p id="6a9f17e1-563e-407e-872f-8589bf81c07a" class="">
+</p><p id="7cb24f7e-9dc0-4bf9-8826-da12b244180f" class=""><em><strong>*This offer can be availed through above mentioned steps only </strong></em></p><p id="c94581d9-0b0c-454e-97e4-b5f9e40e7017" class=""><em><strong>*This offer is only limited to this blog only.</strong></em></p><p id="2e81ad46-5dcd-41e1-a99f-48c8ea61b327" class="">
+</p><h2 id="2fe6d0bb-4933-4c97-bbe7-9274c2eb0186" class=""><strong>REASONS to choose MNCHOST  are:</strong></h2><p id="d2c61096-cc02-4222-854c-428d7f073083" class="">
+</p><p id="d7316ee4-9a3c-4b8d-88e3-8e69931dd1fa" class=""><mark class="highlight-teal_background"><strong>REASON 1 : LITESPEED POWERED (9X FASTER)</strong></mark></p><p id="6bfd893b-86c5-4a2e-8f12-716665664a48" class="">MNCHOST shared and reseller hosting are powered by 9x faster Litespeed webserver . Litespeed is a high-performance Apache drop-in replacement and 4th most popular web server on the internet and the #1 commercial web server. With its streamlined event-driven architecture, LiteSpeed Web Server can serve thousands of clients concurrently with minimal memory consumption and CPU usage.</p><p id="dd93f2cf-83f8-4dbf-9c0b-c2d001c1ff4f" class="">Read more :<a href="http://litespeedtech.com/products/litespeed-web-server/overview"><strong> Litespeed Features</strong></a></p><p id="ed6e9585-8847-4684-9634-c60d758a375f" class="">
+</p><p id="176a0fc4-0886-4500-84f4-9e16223a83fb" class=""><mark class="highlight-teal_background"><strong>REASON 2 : 100% SOLID STATE DRIVES</strong></mark></p><p id="f94a51b4-9e33-4846-9549-158e0f4cde97" class="">A SSD-equipped server boot in seconds, certainly under a minute. Main advantage of SSD over simple harddrives(even raid) is zero input/output resulting in superior transfer speeds and mechanical ruggedness.</p><p id="152a5285-1192-4dfb-b73b-7bec7ad281f8" class="">Read more :<a href="http://en.wikipedia.org/wiki/Solid-state_drive"><strong> Solid State Drives</strong></a></p><p id="b5f157a1-1042-49f7-bb28-f16d5351fb15" class="">
+</p><p id="5394b5de-5803-4c9a-abec-ec1da93dc3f5" class=""><mark class="highlight-teal_background"><strong>REASON 3 : E3 1270 V3 &amp; E5 PROCESSORS</strong></mark></p><p id="4987fab6-1cce-43e5-b51d-1f315a5eca3d" class="">Price and performance details for the Intel Xeon E3-1270 @ 3.40GHz can be found on below link . This is made using thousands of PerformanceTest benchmark results and is updated daily.</p><p id="8b8a074c-356a-46ed-8aca-622cba566bd4" class="">Read More :<a href="http://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+E3-1270+%40+3.40GHz"><strong> Xeon E3-1270 V3</strong></a></p><p id="f80a6501-97a4-4e6b-bae6-97915a84cbdf" class="">Processor Rank : 85/1500</p><p id="4760f737-91f9-4def-bd09-d58e2d789aab" class="">
+</p><p id="2f08d8a9-2794-4238-b428-75f5c143d420" class=""><mark class="highlight-teal_background"><strong>REASON 4 : DAILY R1SOFT/CPREMOTE BACKUP</strong></mark></p><p id="0f702060-f3f1-49df-a5da-990f700f7df8" class="">To avoid any data loss ,we backup your data daily on remote servers .R1Soft/CPremote plugins installed in server to allow every client to restore their website backups on<strong> One-click</strong>.</p><p id="60204439-06b8-4fbc-93e6-86864e8e4505" class="">
+</p><p id="d8353c26-a8f8-4d4f-9481-4716caedbb39" class=""><mark class="highlight-teal_background"><strong>REASON 5 : @24X7 MNC-SUPPORT TEAM</strong></mark></p><p id="1641bee3-6531-421c-b9d6-c060727af648" class="">Average response time to any ticket/email/calls is below 30 minutes .We provide 24X7X365 days support without any weekend holiday.</p><p id="11cd8b98-5e63-4d4c-8e54-e609870e76fd" class="">
+</p><p id="34ad2a5d-fb55-433a-9f40-50eba5c6722a" class=""><mark class="highlight-teal_background"><strong>REASON 6 : WHITE-LABELLED</strong></mark></p><p id="85fa59bd-29c2-4833-a6d9-8299db034c9e" class="">We respect your Business + Privacy and hence we strictly followed concept of white-labeling in all reseller servers .White-labelled means no-one will know about us while you provide services to your clients .</p><p id="3226d5b7-3b63-4669-812b-5505f656be5f" class="">
+</p><p id="c4daa65b-2523-4808-a064-0ec621d8ed69" class="">
+</p><h2 id="97d38c19-d04f-4858-a7ef-200ba4873b13" class="">Introduction </h2><p id="ed20acad-2539-4b33-b73d-ef22fc420bc7" class="">In this blog, I will explain about two types of web hosting i.e Shared hosting and VPS hosting ( Virtual Private Server ). These web hostings are used according to the customer requirements and have their own advantages and disadvantages.</p><p id="4bca6aea-f825-4076-be60-f877658b6f26" class="">
+</p><h2 id="b32910d1-50f8-4381-99b0-4bb7cd7db7d4" class="">What is Shared Hosting ?</h2><p id="4714c01b-4af1-4f55-ae64-e7c1c896b77d" class="">Shared hosting is a type of web hosting service where multiple websites are hosted on a single server. This means that the server resources, such as storage space and bandwidth, are shared among all the websites on the server. <mark class="highlight-teal_background">Shared hosting is a cost-effective and easy-to-use option for individuals and small businesses who want to create a website without the need for a dedicated server or technical expertise.</mark></p><p id="a7aa64a7-4835-42f6-9c10-b67c472cd884" class="">In simple terms, shared hosting is like renting a small room in an apartment building. Just as multiple people may live in the same apartment building and have their own room, multiple websites may be hosted on the same server and have their own space. Each website has its own unique domain name and is separately accessible via the internet, but they all share the same server resources. Shared hosting plans often include a control panel that makes it easy for customers to manage their website and install common web applications, such as WordPress or Magento, without the need for technical expertise.</p><p id="0f0007ad-0ae5-4c47-841d-0cdc68c34131" class="">
+</p><h3 id="9ebefcbe-e824-46a5-8742-1d915448d417" class="">Advantages</h3><ol type="1" id="ebd06812-ed98-4cff-b27d-c9f3efdd7120" class="numbered-list" start="1"><li><mark class="highlight-teal_background"><strong>Cost-effective:</strong></mark> Shared hosting is often the most affordable option for individuals and small businesses who want to create a website. The cost of a shared hosting plan is typically much lower than the cost of a dedicated server or a VPS (Virtual Private Server). This makes it an accessible option for people who are just starting out or have a limited budget.</li></ol><ol type="1" id="c3508ea8-359b-4a6e-9caf-6969de8e7be3" class="numbered-list" start="2"><li><mark class="highlight-teal_background"><strong>Easy to use:</strong></mark> Shared hosting plans often come with a control panel that makes it easy for customers to manage their website. This includes features like one-click installations of common web applications, such as WordPress or Magento, and easy-to-use tools for creating email accounts and managing files.</li></ol><ol type="1" id="9949dd9f-b3f0-4439-9039-aed9bc1220ea" class="numbered-list" start="3"><li><mark class="highlight-teal_background"><strong>Maintenance and technical support:</strong></mark> Shared hosting providers typically take care of server maintenance and technical support, which means customers don&#x27;t have to worry about things like security updates, backups, or troubleshooting technical issues.</li></ol><ol type="1" id="b9898739-cd3a-4f49-8502-3b63f43a290f" class="numbered-list" start="4"><li><mark class="highlight-teal_background"><strong>Scalability:</strong></mark> Shared hosting plans are often highly scalable, which means customers can easily upgrade their plan as their website grows. This is a great option for businesses that expect to experience rapid growth and need to upgrade their hosting plan to meet increased traffic.</li></ol><ol type="1" id="3d6f9dca-beca-45b8-92b5-e0b20e2a3319" class="numbered-list" start="5"><li><mark class="highlight-teal_background"><strong>High uptime:</strong></mark><strong> </strong>Shared hosting providers typically have a high uptime, which means that websites hosted on their servers are less likely to experience downtime. This is important for businesses that rely on their website to generate revenue or provide information to customers.</li></ol><p id="e451103f-d3a6-4ac0-8ce4-fc365f8eaac1" class="">
+</p><h3 id="0e6e20b5-d140-43aa-83cd-54728e1b8a33" class="">Disadvantages</h3><ol type="1" id="c006d906-399c-4a66-a333-642388ca172b" class="numbered-list" start="1"><li><mark class="highlight-red_background">Limited resources:</mark> Shared hosting plans typically come with limited resources, such as storage space and bandwidth. This means that customers may experience slow loading times or have difficulty uploading large files <mark class="highlight-red_background">if their website becomes too popular or if they have a lot of multimedia content</mark>.</li></ol><ol type="1" id="89b4f82e-449b-4dc5-8a60-229c028548fc" class="numbered-list" start="2"><li><mark class="highlight-red_background">Limited control:</mark> Shared hosting plans typically give customers less control over the server environment, which can make it more difficult to customize their website or install certain software.</li></ol><ol type="1" id="fa59bf1a-f7d4-447c-a788-3f8517a28ffc" class="numbered-list" start="3"><li><mark class="highlight-red_background">Security risks:</mark> Because shared hosting plans involve multiple websites being hosted on the same server, there is a greater risk of security breaches. If one website on the server becomes compromised, it can potentially affect all the other websites on the server.</li></ol><ol type="1" id="2862db94-dda6-4340-bc62-fec2887b88bb" class="numbered-list" start="4"><li><mark class="highlight-red_background">Limited privacy:</mark> Shared hosting plans often don&#x27;t offer much privacy, which can be an issue for businesses that handle sensitive data or need to comply with regulations like HIPAA or PCI DSS.</li></ol><ol type="1" id="3d94743b-863a-4baf-adbd-76d920808b58" class="numbered-list" start="5"><li><mark class="highlight-red_background">No root access:</mark> Shared hosting plans don&#x27;t provide root access, which means the customers don&#x27;t have complete control over the server. This can be a disadvantage for businesses that need to install specific software or make custom configurations.</li></ol><p id="474f43b1-304b-456f-b88b-524d28b84d8d" class="">
+</p><h2 id="b79ae5b9-263d-498b-8664-0966e12f7924" class="">What is VPS Hosting ?</h2><p id="6f331a9d-81fe-4eb4-b9b3-392b1d852860" class="">PS (Virtual Private Server) hosting is a type of web hosting service that creates a virtualized environment on a physical server. This virtualized environment, called a &quot;VPS,&quot; is a separate, isolated operating system that functions as its own server. Each VPS is allocated its own resources, such as storage space, RAM, and CPU power, and operates independently of other VPSs on the same physical server.</p><p id="d7c3f2de-3d42-405e-a7bc-e33dc8f146c7" class="">
+</p><p id="aa1ca63a-ea81-44f8-b2fe-2e4874ae4132" class=""><mark class="highlight-teal_background">VPS hosting is a good option for businesses and individuals that need more resources and control than shared hosting provides</mark>, <mark class="highlight-orange_background">but don&#x27;t want to invest in a dedicated server.</mark> VPS hosting plans often include root access, which means customers have complete control over the server environment, and can install custom software or make custom configurations. Additionally, VPS hosting often offers more resources, such as disk space and RAM, than shared hosting plans, which can make it a better option for websites that experience high traffic or have a lot of multimedia content.</p><p id="76813666-1fa8-4390-880b-cc6e1529dcf6" class="">
+</p><h3 id="6e806b38-d185-4430-8e6b-617eb49e0eae" class="">Advantages</h3><ol type="1" id="2492c8c6-9f1d-4699-944a-e1a924c34260" class="numbered-list" start="1"><li><mark class="highlight-teal_background">More resources:</mark> VPS hosting plans typically come with more resources, such as storage space and RAM, than shared hosting plans. This can make it a better option for websites that experience high traffic or have a lot of multimedia content.</li></ol><ol type="1" id="36f8d534-30e3-42fb-8b6a-01721f086d4b" class="numbered-list" start="2"><li><mark class="highlight-teal_background">Improved performance:</mark> Because VPS hosting creates a virtualized environment, each VPS operates independently of other VPSs on the same physical server. This can lead to improved performance for customers compared to shared hosting, where resources are shared among multiple websites.</li></ol><ol type="1" id="bbe480c4-13a7-4237-b8f1-271dfa9eb4ce" class="numbered-list" start="3"><li><mark class="highlight-teal_background">Increased control:</mark> VPS hosting plans often include root access, which means customers have complete control over the server environment. This can make it easier to customize their website or install certain software.</li></ol><ol type="1" id="9d29b2c4-3f9a-456e-a654-3b8ffd3b26c1" class="numbered-list" start="4"><li><mark class="highlight-teal_background">Enhanced security:</mark> VPS hosting plans typically offer enhanced security compared to shared hosting plans. Each VPS operates independently of other VPSs on the same physical server, which can reduce the risk of security breaches.</li></ol><ol type="1" id="0fd22e6f-f288-477a-9783-7dca9e9cf72c" class="numbered-list" start="5"><li><mark class="highlight-teal_background">Scalability:</mark> VPS hosting plans are highly scalable, which means customers can easily upgrade their plan as their website grows. This can be a great option for businesses that expect to experience rapid growth and need to upgrade their hosting plan to meet increased traffic.</li></ol><p id="367cb0cf-69ed-4afc-97c3-34577a798f78" class="">
+</p><h3 id="6143a866-8592-4764-8255-e572713550af" class="">Disadvantages</h3><ol type="1" id="5d151f55-ef75-4132-8f3b-ea6f1899774a" class="numbered-list" start="1"><li><mark class="highlight-red_background">Higher cost:</mark> VPS hosting plans can be more expensive than shared hosting plans, as customers are paying for their own dedicated resources and increased level of control.</li></ol><ol type="1" id="7c50cf3a-bfdb-4be6-8991-6483267f647c" class="numbered-list" start="2"><li><mark class="highlight-red_background">More technical knowledge required:</mark> VPS hosting plans often include root access, which means customers have complete control over the server environment. This can require more technical knowledge to set up and maintain than shared hosting plans.</li></ol><ol type="1" id="1e7967e5-6104-4ae4-81e3-4522fb22e613" class="numbered-list" start="3"><li><mark class="highlight-red_background">Limited resource allocation:</mark> While VPS hosting plans typically come with more resources than shared hosting plans, customers are still limited by the resources allocated to their specific VPS. This means that if a customer&#x27;s website experiences a sudden increase in traffic, they may experience slow loading times or other performance issues.</li></ol><ol type="1" id="637af920-8280-49c5-93d5-85e6c1c58553" class="numbered-list" start="4"><li><mark class="highlight-red_background">Limited scalability:</mark> VPS hosting plans are scalable, but they may not be able to scale as easily or as cost-effectively as dedicated hosting plans. This can be a disadvantage for businesses that expect to experience rapid growth and need to upgrade their hosting plan to meet increased traffic.</li></ol><ol type="1" id="08d89765-9a27-4a94-9efb-77654fe0c137" class="numbered-list" start="5"><li><mark class="highlight-red_background">Limited support:</mark> VPS hosting plans often come with limited support, which means customers may need to rely on their own technical knowledge to troubleshoot and fix issues. This can be a disadvantage for businesses that don&#x27;t have an in-house IT team or for those who are not familiar with server management.</li></ol><p id="cbc61ce5-139d-456d-be7b-8ff96788d4dc" class="">
+</p><h3 id="eb477055-7421-41b4-864d-fe38d8151052" class="">Conclusion</h3><p id="62fa799c-014d-485d-a96f-9eb1b7429a90" class="">Shared hosting is more suitable to those customer whose web traffic is at intial stage where as VPS hosting is more suitable to those customer whose web traffic is in intermediate stage and has technical expertise.</p><p id="bfd22818-19e0-4f5c-bd40-75d42f90210b" class="">In next blog, I will be covering dedicated server hosting in detail.</p><p id="bc60c4de-380f-4554-bdd4-c9f8e6869b47" class="">
+</p><p id="c8f96245-f628-4fc5-b433-372d38a4bf9f" class="">Thank You.</p></div></article></body></html>
